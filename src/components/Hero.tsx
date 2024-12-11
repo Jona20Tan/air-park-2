@@ -18,17 +18,17 @@ export function Hero() {
 
   const createArcText = () => {
     return text.split('').map((char, i) => {
-      const radius = window.innerWidth < 768 ? 150 : 250; // Increased radius for better spacing
-      const angleSpread = 180; // Degrees for the semi-circle
+      const radius = window.innerWidth < 758 ? 250 : 250; // Increased radius for better spacing
+      const angleSpread = 147; // Degrees for the semi-circle
       const startAngle = -180; // Start from left side
-      const angleStep = angleSpread / (text.length - 1);
+      const angleStep = angleSpread / (text.length -6);
       const currentAngle = startAngle + (i * angleStep);
       const radian = (currentAngle * Math.PI) / 180;
       
       // Calculate position on the arc
       const x = radius * Math.cos(radian);
       const y = radius * Math.sin(radian);
-      const letterSpacing = '0.4em'; // Increased letter spacing
+      const letterSpacing = '0em'; // Increased letter spacing
 
       return (
         <span
@@ -42,7 +42,7 @@ export function Hero() {
             transformOrigin: 'center',
             letterSpacing,
             transition: 'transform 0.3s ease',
-            fontSize: window.innerWidth < 768 ? '1.5rem' : '3rem'
+            fontSize: window.innerWidth < 750 ? '3.75rem' : '3.5rem'
           }}
         >
           {char}
@@ -57,11 +57,14 @@ export function Hero() {
       <Container className="py-8">
         <section className="text-center mb-24">
           <h1 className="font-bold text-white relative">
-            <div className="arc-text relative" style={{ height: window.innerWidth < 768 ? '250px' : '350px' }}>
-              {createArcText()}
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-[-45%]">
-                <div className="w-48 h-48 md:w-64 md:h-64 animate-bounce bg-yellow-300 rounded-full flex items-center justify-center">
-                  <Sparkles className="w-24 h-24 md:w-32 md:h-32 text-purple-600" />
+            <div className="arc-text relative" style={{ height: window.innerWidth < 768 ? '300px' : '400px' }}>
+              <div className='-mt-2'>
+                {createArcText()}
+              </div>
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-[-10%]">
+                <div className="w-68 h-68 md:w-68 md:h-68 animate-bounce flex items-center justify-center">
+                  {/* <Sparkles className="w-24 h-24 md:w-32 md:h-32 text-purple-600" /> */}
+                  <img src="/airpark-logo.png"></img>
                 </div>
                 <div className="absolute -right-8 md:-right-16 top-1/2 bg-blue-500 text-white p-2 md:p-4 rounded-full rotate-12">
                   <p className="font-bold text-sm md:text-base">TICKETS<br/>ON<br/>SALE!</p>
@@ -73,21 +76,29 @@ export function Hero() {
 
         <section className="max-w-3xl mx-auto bg-white/10 backdrop-blur-sm p-4 md:p-8 rounded-2xl shadow-2xl">
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
-            Our Attractions
+            Bouncing Moments
           </h2>
           <Slider {...settings}>
             <div>
-              <div className="w-full h-48 md:h-96 bg-purple-200 rounded-lg flex items-center justify-center">
-                <p className="text-xl md:text-2xl font-bold text-purple-600">Fun Bouncing Activities!</p>
-              </div>
+              <img src="/photo1.jpg"></img>
             </div>
             <div>
-              <div className="w-full h-48 md:h-96 bg-blue-200 rounded-lg flex items-center justify-center">
-                <p className="text-xl md:text-2xl font-bold text-blue-600">Exciting Adventures!</p>
-              </div>
+              <img src="/photo2.png"></img>
+            </div>
+            <div>
+              <img src="/photo3.png"></img>
+            </div>
+            <div>
+              <img src="/photo4.png"></img>
+            </div>
+            <div>
+              <img src="/photo5.png"></img>
+            </div>
+            <div>
+              <img src="/photo6.png"></img>
             </div>
           </Slider>
-          <p className="text-center max-w-2xl mx-auto mt-4 md:mt-6 text-sm md:text-base text-white/90">
+          <p className="text-center max-w-2xl mx-auto mt-6 md:mt-8 text-mphoto md:text-base pt-5 text-white/90">
             Experience the thrill and excitement of our world-class attractions
           </p>
         </section>

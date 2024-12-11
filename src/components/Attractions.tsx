@@ -56,7 +56,7 @@ export function Attractions() {
   const attractions = [
     { 
       name: 'Mangosteen Sparrow', 
-      icon: <Sparkles className="w-full h-full" />,
+      icon: <img src="/dragon.jpg"></img>,
       images: ['/placeholder1.jpg', '/placeholder2.jpg', '/placeholder3.jpg'],
       description: 'Experience the thrill of bouncing higher than ever before on our signature attraction. Perfect for all ages!'
     },
