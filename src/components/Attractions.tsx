@@ -31,7 +31,7 @@ interface AttractionProps {
   onViewMore: () => void;
 }
 
-function AttractionCard({ name, icon, onViewMore }: AttractionProps) {
+function AttractionCard({ name, onViewMore }: AttractionProps) {
   return (
     <div className="bg-purple-100 rounded-2xl p-6 shadow-[0_10px_20px_rgba(0,0,0,0.1)] transform hover:scale-105 hover:rotate-2 transition-all duration-300 border-4 border-white">
       <div className="icon-container">
