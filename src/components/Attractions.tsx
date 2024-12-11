@@ -4,6 +4,7 @@ import { Modal } from './ui/Modal';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import styles from './AttractionCard.module.css';
 
 interface ArrowProps {
   className?: string;
@@ -34,10 +35,8 @@ interface AttractionProps {
 function AttractionCard({ name, icon, onViewMore }: AttractionProps) {
   return (
     <div className="bg-purple-100 rounded-2xl p-6 shadow-[0_10px_20px_rgba(0,0,0,0.1)] transform hover:scale-105 hover:rotate-2 transition-all duration-300 border-4 border-white">
-      <div className="w-full h-48 bg-white rounded-lg mb-4 flex items-center justify-center">
-        <div className="text-purple-500 w-24 h-24">
-          {icon}
-        </div>
+      <div className="icon-container">
+        <img src="/dragon.png" alt={name} />
       </div>
       <h3 className="text-xl font-bold text-center mb-2">{name}</h3>
       <button 
@@ -50,13 +49,14 @@ function AttractionCard({ name, icon, onViewMore }: AttractionProps) {
   );
 }
 
+
 export function Attractions() {
   const [selectedAttraction, setSelectedAttraction] = React.useState<number | null>(null);
 
   const attractions = [
     { 
       name: 'Mangosteen Sparrow', 
-      icon: <img src="/dragon.jpg"></img>,
+      icon: <img src="/dragon.png" className="w-full h-full object-cover" />,
       images: ['/placeholder1.jpg', '/placeholder2.jpg', '/placeholder3.jpg'],
       description: 'Experience the thrill of bouncing higher than ever before on our signature attraction. Perfect for all ages!'
     },

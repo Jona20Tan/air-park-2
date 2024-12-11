@@ -62,7 +62,7 @@ export function Hero() {
                 {createArcText()}
               </div>
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-[-10%]">
-                <div className="w-68 h-68 md:w-68 md:h-68 animate-bounce flex items-center justify-center">
+                <div className="w-64 h-64 md:w-68 md:h-68 animate-bounce flex items-center justify-center">
                   {/* <Sparkles className="w-24 h-24 md:w-32 md:h-32 text-purple-600" /> */}
                   <img src="/airpark-logo.png"></img>
                 </div>
