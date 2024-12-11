@@ -1,10 +1,9 @@
 import React from 'react';
-import { Sparkles, Ship, Palmtree, Waves, Anchor, Compass, ChevronRight, ChevronLeft } from 'lucide-react';
+import { Ship, Palmtree, Waves, Anchor, Compass, ChevronRight, ChevronLeft } from 'lucide-react';
 import { Modal } from './ui/Modal';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styles from './AttractionCard.module.css';
 
 interface ArrowProps {
   className?: string;
